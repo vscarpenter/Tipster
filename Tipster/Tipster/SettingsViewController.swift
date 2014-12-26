@@ -25,10 +25,6 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.view.alpha = 0.6
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
-            self.view.alpha = 1.0
-        })
       selectCorrectSegment()
         
     }

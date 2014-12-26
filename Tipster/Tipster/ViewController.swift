@@ -23,8 +23,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tipLabel.text = "$0.00"
-        self.totalLabel.text = "$0.00"
+        self.tipLabel.text = "$ 0.00"
+        self.totalLabel.text = "$ 0.00"
         
         tipControl.layer.cornerRadius = 5.0
         tipControl.layer.masksToBounds = true
