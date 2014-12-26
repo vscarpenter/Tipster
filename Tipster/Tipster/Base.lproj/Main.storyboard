@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J1w-M4-OIM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tipster-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Tipster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gox-tp-k5h">
+                                <rect key="frame" x="16" y="100" width="94" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-LS-EOE">
+                                <rect key="frame" x="16" y="168" width="25" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SP-kE-g8S">
+                                <rect key="frame" x="533" y="168" width="51" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VXJ-Q7-Ttn">
+                                <rect key="frame" x="16" y="232" width="568" height="5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdB-kM-C8v">
+                                <rect key="frame" x="16" y="284" width="108" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2V-Aw-ist">
+                                <rect key="frame" x="533" y="282" width="51" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OIy-bh-5uI">
+                                <rect key="frame" x="16" y="368" width="568" height="29"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tipControlChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="bIo-zO-D4j"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bill amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejF-3a-6At">
+                                <rect key="frame" x="453" y="96" width="131" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="billAmtEntered:" destination="vXZ-lx-hvc" eventType="editingChanged" id="MyO-SB-PVR"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69638066900112428" green="0.63608536418121187" blue="0.97867345328282829" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gox-tp-k5h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0Ly-ck-pRT"/>
+                            <constraint firstItem="OIy-bh-5uI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0St-b0-wiA"/>
+                            <constraint firstItem="H2V-Aw-ist" firstAttribute="top" secondItem="4SP-kE-g8S" secondAttribute="bottom" constant="90" id="19w-PP-nvL"/>
+                            <constraint firstItem="cdB-kM-C8v" firstAttribute="top" secondItem="Zu1-LS-EOE" secondAttribute="bottom" constant="92" id="3oP-nL-IDV"/>
+                            <constraint firstItem="OIy-bh-5uI" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="AX3-Se-sDw"/>
+                            <constraint firstItem="OIy-bh-5uI" firstAttribute="top" secondItem="cdB-kM-C8v" secondAttribute="bottom" constant="60" id="Bo0-3m-M36"/>
+                            <constraint firstItem="4SP-kE-g8S" firstAttribute="top" secondItem="ejF-3a-6At" secondAttribute="bottom" constant="39" id="CP1-BH-ebn"/>
+                            <constraint firstItem="gox-tp-k5h" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="Jey-CY-mnB"/>
+                            <constraint firstItem="ejF-3a-6At" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Oer-w3-bkO"/>
+                            <constraint firstItem="ejF-3a-6At" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="Q5C-Gp-0dB"/>
+                            <constraint firstItem="H2V-Aw-ist" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="aqY-GB-8YH"/>
+                            <constraint firstItem="OIy-bh-5uI" firstAttribute="top" secondItem="H2V-Aw-ist" secondAttribute="bottom" constant="62" id="juc-fI-WzH"/>
+                            <constraint firstItem="4SP-kE-g8S" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="q9J-na-jOv"/>
+                            <constraint firstItem="Zu1-LS-EOE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="w4k-2z-kYD"/>
+                            <constraint firstItem="Zu1-LS-EOE" firstAttribute="top" secondItem="gox-tp-k5h" secondAttribute="bottom" constant="44" id="wnK-qx-gkw"/>
+                            <constraint firstItem="cdB-kM-C8v" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xEb-I0-Fg3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tipster" id="DTa-zh-Bp4">
+                        <barButtonItem key="rightBarButtonItem" image="gear-7" style="done" id="DrL-0A-CNt">
+                            <connections>
+                                <segue destination="qJz-u3-4OX" kind="show" id="i19-Mw-qkK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="amountTextField" destination="ejF-3a-6At" id="Rxa-VK-VBi"/>
+                        <outlet property="tipControl" destination="OIy-bh-5uI" id="C9c-f1-kiL"/>
+                        <outlet property="tipLabel" destination="4SP-kE-g8S" id="Cbi-Tn-1ac"/>
+                        <outlet property="totalLabel" destination="H2V-Aw-ist" id="iuq-S0-eB7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2493" y="404"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="co6-je-y5c">
+            <objects>
+                <viewController storyboardIdentifier="settingsView" id="qJz-u3-4OX" customClass="SettingsViewController" customModule="Tipster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="exg-Mi-3M5"/>
+                        <viewControllerLayoutGuide type="bottom" id="tvn-xP-cpG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qxu-xa-7ve">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tip is 18%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px6-fy-MbD">
+                                <rect key="frame" x="16" y="166" width="568" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Nk-12-E6J">
+                                <rect key="frame" x="16" y="300" width="568" height="29"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="defaultTipChanged:" destination="qJz-u3-4OX" eventType="valueChanged" id="nA6-hH-gfB"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411764705879" green="0.5490196078431373" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="px6-fy-MbD" firstAttribute="leading" secondItem="Qxu-xa-7ve" secondAttribute="leadingMargin" id="9o5-6w-FJN"/>
+                            <constraint firstItem="5Nk-12-E6J" firstAttribute="trailing" secondItem="Qxu-xa-7ve" secondAttribute="trailingMargin" id="DLH-FT-GAd"/>
+                            <constraint firstItem="5Nk-12-E6J" firstAttribute="top" secondItem="px6-fy-MbD" secondAttribute="bottom" constant="101" id="GeY-vl-hns"/>
+                            <constraint firstItem="px6-fy-MbD" firstAttribute="trailing" secondItem="Qxu-xa-7ve" secondAttribute="trailingMargin" id="NI3-dN-k9a"/>
+                            <constraint firstItem="5Nk-12-E6J" firstAttribute="leading" secondItem="Qxu-xa-7ve" secondAttribute="leadingMargin" id="XZ4-Uk-M8c"/>
+                            <constraint firstItem="px6-fy-MbD" firstAttribute="top" secondItem="exg-Mi-3M5" secondAttribute="bottom" constant="102" id="o0O-P4-oxY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="el3-Hd-MEu"/>
+                    <connections>
+                        <outlet property="tipControl" destination="5Nk-12-E6J" id="u1Y-eJ-QWY"/>
+                        <outlet property="tipLabel" destination="px6-fy-MbD" id="Wvd-sl-UXp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBJ-wG-DqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2155" y="985"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tf2-OS-rWb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J1w-M4-OIM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nbR-Z6-rqC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="msn-ea-780"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Q-jE-eLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CAx-mX-QDG">
+            <objects>
+                <navigationController storyboardIdentifier="settingsVC" automaticallyAdjustsScrollViewInsets="NO" id="EAM-ag-aXS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XJZ-xy-Y8v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qJz-u3-4OX" kind="relationship" relationship="rootViewController" id="3YC-5O-oxF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNB-H9-kcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="990"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear-7" width="30" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="i19-Mw-qkK"/>
+    </inferredMetricsTieBreakers>
+</document>
