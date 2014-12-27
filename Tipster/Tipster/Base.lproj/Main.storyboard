@@ -65,7 +65,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bill amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejF-3a-6At">
                                 <rect key="frame" x="453" y="96" width="131" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                                 <connections>
                                     <action selector="billAmtEntered:" destination="vXZ-lx-hvc" eventType="editingChanged" id="MyO-SB-PVR"/>
                                 </connections>

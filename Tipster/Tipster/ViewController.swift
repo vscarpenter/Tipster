@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet var tipControl: UISegmentedControl!
     
     @IBOutlet var amountTextField: UITextField!
@@ -22,10 +22,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tipLabel.text = "$ 0.00"
         self.totalLabel.text = "$ 0.00"
         
+        amountTextField.delegate = self
         tipControl.layer.cornerRadius = 5.0
         tipControl.layer.masksToBounds = true
         tipControl.tintColor = UIColor(red: 92.0/255, green: 69.0/255, blue: 133.0/255, alpha: 0.8)
@@ -41,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         defaultTip = userDefaults?.integerForKey("defaultTip")
         
@@ -51,6 +52,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         billAmtEntered(self)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        amountTextField.resignFirstResponder()
+        return true;
     }
     
     @IBAction func billAmtEntered(sender: AnyObject) {
